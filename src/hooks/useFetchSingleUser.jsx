@@ -5,7 +5,6 @@ const useFetchSingleUser = (userId) => {
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState();
-  console.log(userId);
 
   useEffect(() => {
     setLoading(true);
@@ -17,7 +16,7 @@ const useFetchSingleUser = (userId) => {
           setLoading(false);
         }, 2000)
       );
-  }, []);
+  }, [userId]);
 
   return { user, loading, errors };
 };
