@@ -11,7 +11,7 @@ const UsersPage = () => {
   }
 
   return (
-    <div className="container">
+    <div className="page-container">
       {users.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}

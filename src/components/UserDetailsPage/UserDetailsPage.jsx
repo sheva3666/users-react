@@ -5,7 +5,7 @@ import LoadingSpinner from "../common/Loading/LoadingSpinner";
 
 const UserDetailsPage = () => {
   const { userId } = useParams();
-  const { user, loading } = useFetchSingleUser(userId);
+  const { user = {}, loading } = useFetchSingleUser(userId);
 
   if (loading) {
     return <LoadingSpinner />;
