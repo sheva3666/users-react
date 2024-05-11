@@ -8,7 +8,12 @@ const useFetchUsers = () => {
 
     useEffect(() => {
     setLoading(true)
-      fetchUsers().then(data => setUsers(data.data)).catch(errors => setErrors(errors)).then(() => setLoading(false))
+      fetchUsers()
+      .then(data => setUsers(data.data))
+      .catch(errors => setErrors(errors))
+      .then(() => setTimeout(() => {
+        setLoading(false);
+      }, 2000))
     }, [])
     
   return {users, loading, errors}
