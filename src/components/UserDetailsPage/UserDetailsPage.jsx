@@ -14,8 +14,6 @@ const UserDetailsPage = () => {
 
   const isFollowed = users.find((u) => u.id === user.id);
 
-  console.log(isFollowed);
-
   if (loading) {
     return <LoadingSpinner />;
   }
