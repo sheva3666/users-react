@@ -7,6 +7,7 @@ const UserCard = ({ user }) => {
   const handleClick = () => {
     navigate(`/${user.id}`);
   };
+
   return (
     <div onClick={handleClick} className="user-card">
       <h2>

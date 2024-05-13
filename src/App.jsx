@@ -1,21 +1,17 @@
 import { Route, Routes } from "react-router";
 import Header from "./components/Header/Header";
-import UsersPage from "./components/UsersPage/UsersPage";
-import UserDetailsPage from "./components/UserDetailsPage/UserDetailsPage";
-import UserCreationPage from "./components/UserCreationPage/UserCreationPage";
+import { routes } from "./routes";
 import "./App.css";
 
-const App = () => {
-  return (
-    <>
-      <Header />
-      <Routes>
-        <Route path={"/"} element={<UsersPage />} />
-        <Route path={"/:userId"} element={<UserDetailsPage />} />
-        <Route path={"/registration"} element={<UserCreationPage />} />
-      </Routes>
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Header />
+    <Routes>
+      {routes.map(({ path, element }) => (
+        <Route key={path} path={path} element={element} />
+      ))}
+    </Routes>
+  </>
+);
 
 export default App;
