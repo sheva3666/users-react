@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 30px;
+    background: #000;
+}
+
+.header_nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header_nav-link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
