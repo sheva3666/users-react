@@ -22,6 +22,8 @@ const UserCreationPage = () => {
     }
   };
 
+  const disabledSubmit = !newUser.name && !newUser.password;
+
   return (
     <>
       {registeredUserMessage && <h4>{registeredUserMessage}</h4>}
@@ -43,8 +45,9 @@ const UserCreationPage = () => {
           placeholder="Password"
         />
         <button
+          disabled={disabledSubmit}
           onClick={(e) => handleSubmit(e)}
-          className="form_button"
+          className={`form_button ${disabledSubmit && "disabled"}`}
           type="submit"
         >
           Register

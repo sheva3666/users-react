@@ -11,14 +11,14 @@ export const StaticRoutes = {
 export const routes = [
   {
     path: StaticRoutes.home,
-    element: <UsersPage />,
+    Compoment: UsersPage,
   },
   {
     path: StaticRoutes.userDetails,
-    element: <UserDetailsPage />,
+    Compoment: UserDetailsPage,
   },
   {
     path: StaticRoutes.registration,
-    element: <UserCreationPage />,
+    Compoment: UserCreationPage,
   },
 ];

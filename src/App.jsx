@@ -7,8 +7,8 @@ const App = () => (
   <>
     <Header />
     <Routes>
-      {routes.map(({ path, element }) => (
-        <Route key={path} path={path} element={element} />
+      {routes.map(({ path, Compoment }) => (
+        <Route key={path} path={path} element={<Compoment />} />
       ))}
     </Routes>
   </>
