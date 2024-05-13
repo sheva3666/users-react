@@ -13,6 +13,9 @@ const Header = () => {
         <Link className="header_nav-link" to={StaticRoutes.registration}>
           Registration
         </Link>
+        <Link className="header_nav-link" to={StaticRoutes.follows}>
+          Follows
+        </Link>
       </div>
     </div>
   );
